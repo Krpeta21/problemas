@@ -12,9 +12,7 @@ function convertToMilitary(hour){
         convertedHour = splitedHour.join(':')
     }else{
         removeLettersFromTime()
-        if(splitedHour[0] === '12'){
-            splitedHour[0] = '12'
-        }else{
+        if(splitedHour[0] !== '12'){
             splitedHour[0] =  parseInt(splitedHour[0]) + 12
         }
        convertedHour = splitedHour.join(':')
@@ -22,4 +20,4 @@ function convertToMilitary(hour){
      return convertedHour
 }
 
-console.log(convertToMilitary('12:05:45AM'))
+console.log(convertToMilitary('5:05:45PM'))
